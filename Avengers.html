@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Avengers</title>
+    <style>
+        body{
+            font-family: aviano black;
+            font-size: 15xp;
+            line-height: 1.75;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        #timeline{
+            display: flex;
+            background-color: #1894ec;
+
+        }
+
+        #timeline:hover .item{
+            width: 23.3333%;
+        }
+        
+        .item{
+            transform: translate3d(0,0,0);
+            position: relative;
+            width: 25%;
+            height: 100vh;
+            min-height: 600px;
+            color: white;
+            overflow: hidden;
+            transition: width 0.5s ease;
+        }
+
+        .item::before, .item:after{
+            transform: translate3d(0,0,0);
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            
+        }
+
+        item:after{
+            background: rgba(21,126,209,0.85);
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        .item::before{
+            background: linear-gradient(to bottom, rgba(0,0,0,0)0%, rgba(0,0,0,1) 75%);
+            z-index: 1;
+            opacity: 0;
+            transform: translate3d(0,0,0)translateY(50%) ;
+            transition: opacity 0.5s ease, transform 0.5s ease ;
+        }
+
+        .item:hover{
+            width: 30% !important ;
+        }
+        
+        .item:hover .content{
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.75s ease 0.5s;
+        }
+
+        .item:hover .bg{
+            filter: grayscale(0);
+        }
+
+        .content{
+            transform: translate3d(0,0,0) translateY(25px);
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            margin: 0 1.618em;
+            top: 55%;
+            opacity: 0;
+        }
+
+        .content h1{
+            font-family: aviano black;
+            text-transform: uppercase;
+            color: blue;
+            font-size: 1.44;
+            font-weight: normal;
+        }
+
+        .year{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: 1;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+        }
+
+        .year p{
+            font-family: aviano black;
+            font-size: 1.728rem;
+            line-height: 0;
+        }
+
+        .bg{
+            transform: translate3d(0,0,0);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-position: center center;
+            transition: filter 0.5s ease;
+            filter: grayscale(100%);
+
+        }
+
+        P{
+            font-family: aviano black;
+            font-weight: normal;
+        }
+
+
+          
+
+
+
+    </style>
+</head>
+<body>
+<section id="timeline">
+    <div class="item">
+        <div class ="bg" style="background-image: url('Tony Stark.jpg');"></div>
+        <div class="year">
+            <p> Iron Man</p>
+        </div>
+        <div class="content">
+            <h1> Tony Stark</h1>
+            <p>
+                "Tony" Stark was born on May 29, 1970, in Manhattan,
+                 New York to Howard Stark, a famous genius 
+                inventor and businessman, and Maria Stark, 
+                a New York socialite and philanthropist. Growing up
+                under the eye of family butler Edwin Jarvis , his 
+                life was characterized by a cold and affectionless relationship with his father.
+            </p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class ="bg" style="background-image: url('Captain America.jpg');"></div>
+        <div class="year">
+            <p> Captain </p>
+            <p>America</p>
+        </div>
+        <div class="content">
+            <h1> Steve Rogers</h1>
+            <p>
+                Steve Rogers was born on July 4, 1918, in Brooklyn, New York, to Sarah Rogers. 
+                His father, a member of the 107th Infantry Regiment , was killed by mustard gas 
+                during the First World War . He was raised by his mother, a nurse,
+                 who died of tuberculosis , leaving Rogers alone at the age of eighteen.
+            </p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class ="bg" style="background-image: url('Thor.jpg');"></div>
+        <div class="year">
+            <p> Thor</p>
+        </div>
+        <div class="content">
+            <h1> Thor</h1>
+            <p>
+                Thor goes out, finds Hymir 's best ox, and rips its head off. 
+                After a lacuna in the manuscript of the poem, Hymiskviða abruptly picks up 
+                again with Thor and Hymir in a boat, out at sea. Hymir catches a few whales at once, 
+                and Thor baits his line with the head of the ox. Thor casts his line and the monstrous 
+                serpent Jörmungandr bites. 
+            </p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class ="bg" style="background-image: url('Hulk.jpg');"></div>
+        <div class="year">
+            <p> Hulk</p>
+        </div>
+        <div class="content">
+            <h1> Bruce Banner</h1>
+            <p>
+                Dr. Bruce Banner, Ph.D aka the Hulk is an American theoretical physicist,
+                 famed for his work into the studies of nuclear physics and gamma radiation.
+                  He was recruited by General Thaddeus "Thunderbolt" Ross and the US Army to 
+                  develop the first Gamma Bomb.
+            </p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class ="bg" style="background-image: url('Black Widow.jpg');"></div>
+        <div class="year">
+            <p> Black </p>
+            <p> Widow </p>
+        </div>
+        <div class="content">
+            <h1> Natasha Romanoff</h1>
+            <p>
+                Natalia Alianovna "Natasha" Romanoff (Russian: Наталья Алиановна "Наташа" Романова), 
+                also known as Black Widow, was one of the most talented spies and assassins in the entire 
+                world and a founding member of the Avengers. As a child, she was indoctrinated into the Red
+                 Room by General Dreykov, and briefly lived as the surrogate daughter of Alexei Shostakov
+                  and Melina
+            </p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class ="bg" style="background-image: url('Halk eye.jpg');"></div>
+        <div class="year">
+            <p> Halk Eye</p>
+        </div>
+        <div class="content">
+            <h1> clint Barton</h1>
+            <p>
+                Hawkeye (Clinton Francis Barton) is a fictional character appearing in American 
+                comic books published by Marvel Comics.Created by writer Stan Lee and artist Don 
+                Heck, the character first appeared as a villain in Tales of Suspense(Sept. 1964) 
+                and later joined the Avengers in The Avengers (May 1965).
+            </p>
+        </div>
+    </div>
+</section>
+</body>
+</html>
